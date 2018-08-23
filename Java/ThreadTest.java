@@ -16,15 +16,18 @@ public class ThreadTest {
 		Thread t = new ExtendThread();
 		t.start();
 
+		
+		
 		// 实现 Runnable接口
 		Runnable r = new ImplRunnable();
 		// 构建线程
 		Thread tr = new Thread(r);
 		tr.start();
 
+		
+		
 		// 实现 Callable接口 可以有返回值 FutureTask
 		Callable<Integer> c = new ImplCallable();
-
 		FutureTask<Integer> fu = new FutureTask<>(c);
 		// 构建线程
 		Thread tf = new Thread(fu);
